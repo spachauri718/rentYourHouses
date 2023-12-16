@@ -16,7 +16,7 @@ import BookingPage from "./pages/BookingPage.jsx";
 import BookingsPage from "./pages/BookingsPage.jsx";
 
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://rent-your-houses.vercel.app";
 axios.defaults.withCredentials = true;
 
 function App() {
