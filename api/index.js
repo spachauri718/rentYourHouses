@@ -24,7 +24,7 @@ const jwtSecret = "ajsdofjakjoajsljoajfokjoo0i-weq9r0m";
 app.use(
   cors({
     credentials: true,
-    origin: "https://rent-your-houses.vercel.app/",
+    origin: "http://localhost:5173",
   })
 );
 
