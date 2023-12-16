@@ -13,6 +13,7 @@ const cookieParser = require("cookie-parser");
 const imageDownloader = require("image-downloader");
 const multer = require("multer");
 const fs = require("fs"); //for renaming the files 
+const env = require("env");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -28,7 +29,10 @@ app.use(
   })
 );
 
-mongoose.connect("mongodb+srv://dracooo:dracooo123@cluster0.yqym3ph.mongodb.net/");
+const Mongourl = process.env.MONGO_URL;
+
+mongoose.connect(Mongourl);
+console.log(Mongourl)
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error  "));
 db.once("open", function () {
